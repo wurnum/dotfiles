@@ -1,0 +1,7 @@
+resolver: lts-19.17
+
+packages:
+  - .
+
+extra-deps:
+  - taffybar-4.0.0

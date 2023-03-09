@@ -1,0 +1,50 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           xmobar-config
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/envarq/dotfiles#readme>
+homepage:       https://github.com/envarq/dotfiles#readme
+bug-reports:    https://github.com/envarq/dotfiles/issues
+author:         Serhii Chubenko
+maintainer:     envarq@proton.me
+copyright:      2023 Serhii Chubenko
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/envarq/dotfiles
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_xmobar_config
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , xmobar
+  default-language: Haskell2010
+
+executable xmobar
+  main-is: Main.hs
+  other-modules:
+      Paths_xmobar_config
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , xmobar
+    , xmobar-config
+  default-language: Haskell2010

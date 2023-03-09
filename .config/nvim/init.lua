@@ -1,0 +1,7 @@
+require 'plugins'
+require 'options'
+require 'colors.substrata'
+require 'highlight-colors-config'
+require 'lualine-config'
+--require 'headlines-config'
+require 'treesitter-config'

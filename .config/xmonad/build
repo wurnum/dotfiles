@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+stack install --local-bin-path bin/
+
+mv bin/xmonad "$1"
+
+cd ../xmobar
+stack install
